@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-20T11:06:22.997397" rpa="false" schemaversion="5">
+<suite id="s1" name="Labb1" source="C:\Users\kinal\OneDrive\Skrivbord\Mjukvarotest\Python\Robotframework\Labb1\labb1.robot">
+<kw name="setup" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T11:06:23.360069" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T11:06:23.360069" elapsed="1.621531"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-20T11:06:24.982601" level="INFO">Opening url 'http://rental15.infotiv.net/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-20T11:06:24.981600" elapsed="0.412472"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-20T11:06:25.394072" elapsed="0.019035"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-03-20T11:06:25.413107" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2024-03-20T11:06:23.358553" elapsed="2.055555"/>
+</kw>
+<test id="s1-t1" name="short cardnumber" line="48">
+<kw name="testing short cardnumber">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T11:06:25.417110" level="INFO">Typing text 'kinaliatakan@hotmail.com' into text field '//*[@id="email"]'.</msg>
+<arg>//*[@id="email"]</arg>
+<arg>${usermail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T11:06:25.416113" elapsed="1.696500"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T11:06:27.114635" level="INFO">Typing text 'Lamporna99' into text field '//*[@id="password"]'.</msg>
+<msg time="2024-03-20T11:06:27.668436" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6BA9AAD02+56930]
+	(No symbol) [0x00007FF6BA91F602]
+	(No symbol) [0x00007FF6BA7D42E5]
+	(No symbol) [0x00007FF6BA7B1D4C]
+	(No symbol) [0x00007FF6BA8423F7]
+	(No symbol) [0x00007FF6BA857891]
+	(No symbol) [0x00007FF6BA83BA43]
+	(No symbol) [0x00007FF6BA80D438]
+	(No symbol) [0x00007FF6BA80E4D1]
+	GetHandleVerifier [0x00007FF6BAD26F8D+3711213]
+	GetHandleVerifier [0x00007FF6BAD804CD+4077101]
+	GetHandleVerifier [0x00007FF6BAD7865F+4044735]
+	GetHandleVerifier [0x00007FF6BAA49736+706710]
+	(No symbol) [0x00007FF6BA92B8DF]
+	(No symbol) [0x00007FF6BA926AC4]
+	(No symbol) [0x00007FF6BA926C1C]
+	(No symbol) [0x00007FF6BA9168D4]
+	BaseThreadInitThunk [0x00007FFCEC18257D+29]
+	RtlUserThreadStart [0x00007FFCECF0AA58+40]
+</msg>
+<msg time="2024-03-20T11:06:27.669437" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6BA9AAD02+56930]
+	(No symbol) [0x00007FF6BA91F602]
+	(No symbol) [0x00007FF6BA7D42E5]
+	(No symbol) [0x00007FF6BA7B1D4C]
+	(No symbol) [0x00007FF6BA8423F7]
+	(No symbol) [0x00007FF6BA857891]
+	(No symbol) [0x00007FF6BA83BA43]
+	(No symbol) [0x00007FF6BA80D438]
+	(No symbol) [0x00007FF6BA80E4D1]
+	GetHandleVerifier [0x00007FF6BAD26F8D+3711213]
+	GetHandleVerifier [0x00007FF6BAD804CD+4077101]
+	GetHandleVerifier [0x00007FF6BAD7865F+4044735]
+	GetHandleVerifier [0x00007FF6BAA49736+706710]
+	(No symbol) [0x00007FF6BA92B8DF]
+	(No symbol) [0x00007FF6BA926AC4]
+	(No symbol) [0x00007FF6BA926C1C]
+	(No symbol) [0x00007FF6BA9168D4]
+	BaseThreadInitThunk [0x00007FFCEC18257D+29]
+	RtlUserThreadStart [0x00007FFCECF0AA58+40]
+</msg>
+<arg>//*[@id="password"]</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-03-20T11:06:27.113634" elapsed="0.587835">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6BA9AAD02+56930]
+	(No symbol) [0x00007FF6BA91F602]
+	(No symbol) [0x00007FF6BA7D42E5]
+	(No symbol) [0x00007FF6BA7B1D4C]
+	(No symbol) [0x00007FF6BA8423F7]
+	(No symbol) [0x00007FF6BA857891]
+	(No symbol) [0x00007FF6BA83BA43]
+	(No symbol) [0x00007FF6BA80D438]
+	(No symbol) [0x00007FF6BA80E4D1]
+	GetHandleVerifier [0x00007FF6BAD26F8D+3711213]
+	GetHandleVerifier [0x00007FF6BAD804CD+4077101]
+	GetHandleVerifier [0x00007FF6BAD7865F+4044735]
+	GetHandleVerifier [0x00007FF6BAA49736+706710]
+	(No symbol) [0x00007FF6BA92B8DF]
+	(No symbol) [0x00007FF6BA926AC4]
+	(No symbol) [0x00007FF6BA926C1C]
+	(No symbol) [0x00007FF6BA9168D4]
+	BaseThreadInitThunk [0x00007FFCEC18257D+29]
+	RtlUserThreadStart [0x00007FFCECF0AA58+40]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//*[@id="login"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.702469" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="welcomePhrase"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.702469" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//*[@id="start"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.703468" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//*[@id="end"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.703468" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//*[@id="end"]</arg>
+<arg>${end date}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.703468" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//*[@id="continue"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.704468" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="questionText"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.704468" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${car}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.704468" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//*[@id="cardNum"]</arg>
+<arg>123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.704468" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//*[@id="fullName"]</arg>
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.704468" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<arg>//*[@id="confirmSelection"]/form/select[1]</arg>
+<arg>${card day}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.705976" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<arg>//*[@id="confirmSelection"]/form/select[2]</arg>
+<arg>${card month}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.705976" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//*[@id="cvc"]</arg>
+<arg>${cvc}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.705976" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//*[@id="confirm"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.706985" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Confirm booking of Tesla Roadster</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2024-03-20T11:06:27.706985" elapsed="0.000000"/>
+</kw>
+<tag>Short cardnumber</tag>
+<doc>Short cardnumber</doc>
+<status status="FAIL" start="2024-03-20T11:06:25.415112" elapsed="2.291873">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6BA9AAD02+56930]
+	(No symbol) [0x00007FF6BA91F602]
+	(No symbol) [0x00007FF6BA7D42E5]
+	(No symbol) [0x00007FF6BA7B1D4C]
+	(No symbol) [0x00007FF6BA8423F7]
+	(No symbol) [0x00007FF6BA857891]
+	(No symbol) [0x00007FF6BA83BA43]
+	(No symbol) [0x00007FF6BA80D438]
+	(No symbol) [0x00007FF6BA80E4D1]
+	GetHandleVerifier [0x00007FF6BAD26F8D+3711213]
+	GetHandleVerifier [0x00007FF6BAD804CD+4077101]
+	GetHandleVerifier [0x00007FF6BAD7865F+4044735]
+	GetHandleVerifier [0x00007FF6BAA49736+706710]
+	(No symbol) [0x00007FF6BA92B8DF]
+	(No symbol) [0x00007FF6BA926AC4]
+	(No symbol) [0x00007FF6BA926C1C]
+	(No symbol) [0x00007FF6BA9168D4]
+	BaseThreadInitThunk [0x00007FFCEC18257D+29]
+	RtlUserThreadStart [0x00007FFCECF0AA58+40]
+</status>
+</kw>
+<status status="FAIL" start="2024-03-20T11:06:25.414108" elapsed="2.293877">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6BA9AAD02+56930]
+	(No symbol) [0x00007FF6BA91F602]
+	(No symbol) [0x00007FF6BA7D42E5]
+	(No symbol) [0x00007FF6BA7B1D4C]
+	(No symbol) [0x00007FF6BA8423F7]
+	(No symbol) [0x00007FF6BA857891]
+	(No symbol) [0x00007FF6BA83BA43]
+	(No symbol) [0x00007FF6BA80D438]
+	(No symbol) [0x00007FF6BA80E4D1]
+	GetHandleVerifier [0x00007FF6BAD26F8D+3711213]
+	GetHandleVerifier [0x00007FF6BAD804CD+4077101]
+	GetHandleVerifier [0x00007FF6BAD7865F+4044735]
+	GetHandleVerifier [0x00007FF6BAA49736+706710]
+	(No symbol) [0x00007FF6BA92B8DF]
+	(No symbol) [0x00007FF6BA926AC4]
+	(No symbol) [0x00007FF6BA926C1C]
+	(No symbol) [0x00007FF6BA9168D4]
+	BaseThreadInitThunk [0x00007FFCEC18257D+29]
+	RtlUserThreadStart [0x00007FFCECF0AA58+40]
+</status>
+</test>
+<kw name="Tear Down" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T11:06:27.707985" elapsed="2.629981"/>
+</kw>
+<status status="PASS" start="2024-03-20T11:06:27.707985" elapsed="2.629981"/>
+</kw>
+<doc>Boka bil</doc>
+<status status="FAIL" start="2024-03-20T11:06:23.000369" elapsed="7.337597"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Labb1">Labb1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-03-20T11:06:27.668436" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6BA9AAD02+56930]
+	(No symbol) [0x00007FF6BA91F602]
+	(No symbol) [0x00007FF6BA7D42E5]
+	(No symbol) [0x00007FF6BA7B1D4C]
+	(No symbol) [0x00007FF6BA8423F7]
+	(No symbol) [0x00007FF6BA857891]
+	(No symbol) [0x00007FF6BA83BA43]
+	(No symbol) [0x00007FF6BA80D438]
+	(No symbol) [0x00007FF6BA80E4D1]
+	GetHandleVerifier [0x00007FF6BAD26F8D+3711213]
+	GetHandleVerifier [0x00007FF6BAD804CD+4077101]
+	GetHandleVerifier [0x00007FF6BAD7865F+4044735]
+	GetHandleVerifier [0x00007FF6BAA49736+706710]
+	(No symbol) [0x00007FF6BA92B8DF]
+	(No symbol) [0x00007FF6BA926AC4]
+	(No symbol) [0x00007FF6BA926C1C]
+	(No symbol) [0x00007FF6BA9168D4]
+	BaseThreadInitThunk [0x00007FFCEC18257D+29]
+	RtlUserThreadStart [0x00007FFCECF0AA58+40]
+</msg>
+</errors>
+</robot>
