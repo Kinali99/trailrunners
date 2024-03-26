@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Bygg ditt Java-projekt här
-                sh 'mvn clean package' // Exempel: Om du använder Maven
+                sh 'mvn compile' // Exempel: Om du använder Maven
             }
         }
         stage('Test') {
