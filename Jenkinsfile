@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat "mvn test" // Kör JUnit-test här
+                sh "mvn test" // Kör JUnit-test här
                 junit "target/surefire-reports/**/*.xml"
                 
             }
