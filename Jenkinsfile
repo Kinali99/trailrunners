@@ -10,8 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 bat "mvn test" // Kör JUnit-test här
-                junit "${PWD}/target/surefire-reports/**/*.xml"
-
+                junit "${pwd()}/target/surefire-reports/**/*.xml"
 
                 
             }
