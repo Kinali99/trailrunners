@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat "mvn compile" // Bygg ditt Java-projekt här
+                bat 'mvn -f "C:\Users\kinal\.jenkins\workspace\Atakan_Kinali\pom.xml" compile'
             }
         }
         stage('Test') {
             steps {
-                bat "mvn test" // Kör JUnit-test här
+               bat 'mvn -f "C:\Users\kinal\.jenkins\workspace\Atakan_Kinali\pom.xml" test'
                 
 
                 
