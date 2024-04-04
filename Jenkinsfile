@@ -1,28 +1,20 @@
 pipeline {
     agent any
     stages {
-        stage('Build test hamid') {
+         stage('Build and Test') {
             steps {
+                // Bygger projektet och kör testerna
                 script {
-                    sh 'mvn compile'
+                    sh 'mvn clean test'
                 }
             }
         }
  
-        stage('Test') {
+        stage('Publish Test Results') {
             steps {
-                sh 'mvn test'
+                // Publicerar testresultaten i JUnit XML-format
+                junit '**/target/surefire-reports/*.xml'
             }
         }
- 
-        stage('Post Test') {
-            steps {
-                script {
-                   
-                    junit '**/TEST*.xml'
-                }
-            }
-        }
- 
     }
 }
