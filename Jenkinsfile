@@ -1,27 +1,28 @@
 pipeline {
     agent any
-
     stages {
-        stage('Build') {
+        stage('Build test hamid') {
             steps {
-                bat 'mvn -f "C:/Users/kinal/.jenkins/workspace/Atakan_Kinali/pom.xml" compile'
+                script {
+                    sh 'mvn compile'
+                }
             }
         }
+ 
         stage('Test') {
             steps {
-               bat 'mvn -f "C:/Users/kinal/.jenkins/workspace/Atakan_Kinali/pom.xml" test'
-                
-
-                
+                sh 'mvn test'
             }
         }
+ 
         stage('Post Test') {
             steps {
                 script {
+                   
                     junit '**/TEST*.xml'
                 }
             }
         }
+ 
     }
 }
-
